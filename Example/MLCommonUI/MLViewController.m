@@ -7,6 +7,7 @@
 //
 
 #import "MLViewController.h"
+#import "MLFirstButton.h"
 
 @interface MLViewController ()
 
@@ -18,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    MLFirstButton* btn = [[MLFirstButton alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+    [self.view addSubview:btn];
+    btn.layer.backgroundColor = UIColor.redColor.CGColor;
 }
 
 - (void)didReceiveMemoryWarning
